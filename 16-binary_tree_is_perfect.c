@@ -12,10 +12,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	a = binary_tree_height(tree);
+	a = binary_tree_height(tree) + 1;
 	b = (int)binary_tree_size(tree);
 
-	if ((1 << (a + 1)) - 1 == b)
+	if ((1 << (a)) - 1 == b)
 		return (1);
 
 	return (0);
